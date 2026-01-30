@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -14,15 +16,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  
+  font-family: "Montserrat", sans-serif;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --background: #12100E;
+  --brown-dark: #2C1B14;
+  --brown-light: #4E342E;
+  --accent: #D97706;
+  --text-dark: #2C1B14;
+  --text-light: #FAF9F6;
+
+
+  --orange: #D97706;
+  --burnt-orange: #B45309;
+  --warm-honey: #F59E0B;
 }
 
 body {
@@ -31,41 +38,45 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--background);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a{
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.2s linear;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+a:hover{
+  color: var(--warm-honey);
+  transition: all 0.2s linear;
+}
+
+.bg-dark-brown{
+  background-color: var(--brown-dark);
+}
+
+
+.cta-button {
+  background: linear-gradient(
+    to bottom, 
+    var(--warm-honey) 0%, 
+    var(--orange) 50%, 
+    var(--burnt-orange) 100%
+  );
+  background-size: 100% 200%;
+  background-position: top;
+
+  color: var(--text-light);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background-position 0.4s ease, transform 0.2s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.cta-button:hover {
+  color: var(--text-light);
+  background-position: bottom;
+  transform: translateY(-0.1px);
 }
