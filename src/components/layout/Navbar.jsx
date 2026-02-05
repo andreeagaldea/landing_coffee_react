@@ -1,11 +1,20 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    if (navRef.current) {
+      const height = navRef.current.offsetHeight;
+      document.documentElement.style.setProperty('--nav-height', `${height}px`);
+    }
+  }, []);
+
   return (
-    <nav className='bg-dark-brown border-b border-[#12100E] px-8 py-4'>
+    <nav ref={navRef} className='bg-dark-brown border-b border-[#12100E] px-8 py-4'>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         
         <div className="font-bold text-2xl text-white">Logo</div>

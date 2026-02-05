@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -39,6 +37,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 a{
@@ -79,4 +78,19 @@ a:hover{
   color: var(--text-light);
   background-position: bottom;
   transform: translateY(-0.1px);
+}
+
+.text-light{
+  color: var(--text-light);
+}
+
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.special-text{
+  color: var(--accent);
+  font-weight: 900; 
+  font-style: italic;
 }
