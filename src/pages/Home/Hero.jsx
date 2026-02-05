@@ -13,8 +13,19 @@ function Hero() {
             Redefining the standard of premium coffee. Experience a curated 
             journey from the worlds's moste exclusive high-altitude estates to your morning ritual.</p>
         </div>
-        <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5'>
-        <img src="../../src/assets/coffee-bag.png" alt="" className='' style={{maxHeight:'500px'}}/></div>
+        <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 relative'>
+          <img src="../../src/assets/coffee-bag.png" alt="" className='' style={{maxHeight:'550px', zIndex:10}}/>
+          <div className='beans'>
+            <img src="../../src/assets/beans/1.png" alt="" className='absolute' 
+              style={{zIndex:11, right:0, bottom:'-7%'}}/>
+            {/* <img src="../../src/assets/beans/2.png" alt="" className='absolute' 
+              style={{zIndex:11, right:0, top:0, }}/> */}
+            <img src="../../src/assets/beans/3.png" alt="" className='absolute' 
+              style={{zIndex:11, right:'7%', top: '2%', }}/>
+            <img src="../../src/assets/beans/4.png" alt="" className='absolute' 
+              style={{zIndex:1, right:0, left:'15%', bottom:0, maxHeight: '380px', filter: 'blur(1px)'}}/>
+          </div>
+          </div>
       </div>
     </div>
 
