@@ -74,7 +74,7 @@ function Hero() {
       <div className="content flex flex-col lg:flex-row w-full items-center justify-center max-w-7xl">
 
         <div className='w-full lg:w-1/2 p-5 flex flex-col justify-center'>
-          <h1 ref={titleRef} className="text-white text-6xl font-bold pb-5 text-center lg:text-left">
+          <h1 ref={titleRef} className="text-white text-7xl md:text-8xl font-bold pt-5 pb-5 text-center lg:text-left">
             Pure <span className='special-text'>Artistry</span> In Every Bean.</h1>
           <p ref={paragraphRef} className='text-light opacity-75 text-center lg:text-left' style={{opacity:0}}>
             Redefining the standard of premium coffee. Experience a curated 
