@@ -1,9 +1,15 @@
 import { useEffect, useRef } from 'react';
 import Parallax from 'parallax-js';
+import { animate, createScope, stagger, splitText} from 'animejs';
 import './Home.css'
 
 function Hero() {
-const sceneRef = useRef(null);
+  const sceneRef = useRef(null);
+  const scope = useRef(null);
+
+  const titleRef = useRef(null);
+  const paragraphRef = useRef(null);
+
 
   useEffect(() => {
     let parallaxInstance;
@@ -15,9 +21,50 @@ const sceneRef = useRef(null);
       });
     }
 
+    scope.current = createScope({ root: sceneRef.current }).add( self => {
+
+      animate('#coffeeBag', {
+        translateY: [0, 10],
+        translateX: [10, 0],
+        duration: 2000,
+        easing: 'inQuad',
+        loop: true,
+        alternate: true,
+        delay: 300,
+      });
+
+    if (titleRef.current) {
+      const splitTitle = splitText(titleRef.current, { words: true, chars: true });
+      if (splitTitle.chars && splitTitle.chars.length > 0) {
+        animate(splitTitle.chars, {
+          opacity: [0, 1],
+          translateX: [-20, 0],
+          duration: 600,
+          easing: 'outQuad',
+          delay: stagger(50),
+        });
+      }
+    }
+
+    if (paragraphRef.current) {
+      
+        animate('#hero p', {
+          opacity: [0, 1],
+          duration: 500,
+          easing: 'outQuad',
+          delay: 2000,
+        });
+    }
+
+    });
+
     return () => {
       parallaxInstance?.destroy();
+      if (scope.current && typeof scope.current.revert === 'function') {
+        scope.current.revert();
+      }
     }
+
   }, []);
 
   return (
@@ -27,9 +74,9 @@ const sceneRef = useRef(null);
       <div className="content flex flex-col lg:flex-row w-full items-center justify-center max-w-7xl">
 
         <div className='w-full lg:w-1/2 p-5 flex flex-col justify-center'>
-          <h1 className="text-white text-6xl font-bold pb-5 text-center lg:text-left">
+          <h1 ref={titleRef} className="text-white text-6xl font-bold pb-5 text-center lg:text-left">
             Pure <span className='special-text'>Artistry</span> In Every Bean.</h1>
-          <p className='text-light opacity-75 text-center lg:text-left'>
+          <p ref={paragraphRef} className='text-light opacity-75 text-center lg:text-left' style={{opacity:0}}>
             Redefining the standard of premium coffee. Experience a curated 
             journey from the worlds's moste exclusive high-altitude estates to your morning ritual.</p>
         </div>
@@ -42,7 +89,7 @@ const sceneRef = useRef(null);
           </div>
 
           <div className="layer absolute inset-0 w-full h-full flex justify-center lg:justify-end" data-depth="0.2" style={{ zIndex: 5 }}>
-            <img src="../../src/assets/coffee-bag.png" alt="Coffee Bag" style={{ maxHeight: '550px' }} />
+            <img src="../../src/assets/coffee-bag.png" alt="Coffee Bag" style={{ maxHeight: '550px' }} id="coffeeBag"/>
           </div>
 
           <div className="layer absolute inset-0 w-full h-full" data-depth="0.4" style={{ zIndex: 10 }}>
