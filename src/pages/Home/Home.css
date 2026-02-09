@@ -13,7 +13,7 @@
 }
 
 .background {
-    background-image: url('../../assets/background.jpg');
+    background-image: url('/assets/background.webp');
     background-blend-mode: overlay;
     background-color: var(--background);
     background-attachment: fixed;

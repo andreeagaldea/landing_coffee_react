@@ -19,7 +19,7 @@ const Navbar = () => {
         
         <div className="font-bold text-2xl text-white">Logo</div>
 
-        <button className="text-white md:hidden focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
+        <button id="burger-icon" className="text-white md:hidden focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

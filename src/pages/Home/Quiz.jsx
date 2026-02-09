@@ -23,7 +23,7 @@ export default function Quiz() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {firstQuestion.options.map((opt, i) => (
               <button 
-                key={i}
+                key={i} id={'button-' + i}
                 onClick={() => handleStartQuiz(opt.type)}
                 className="p-4 bg-orange-500 hover:bg-orange-600 rounded-xl font-bold transition-all transform hover:scale-105 cursor-pointer"
               >
