@@ -4,7 +4,6 @@ const Footer = () => {
     textAlign: 'center',
     color: 'white',
     marginTop: 'auto',
-    width: '100vw',
   };
 
   return (

@@ -30,6 +30,10 @@
   --warm-honey: #F59E0B;
 }
 
+#root{
+  width: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -37,7 +41,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background);
-  overflow-x: hidden;
 }
 
 a{
