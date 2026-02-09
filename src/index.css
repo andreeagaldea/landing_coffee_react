@@ -58,7 +58,6 @@ a:hover{
   background-color: var(--brown-dark);
 }
 
-
 .cta-button {
   background: linear-gradient(
     to bottom, 
@@ -87,6 +86,10 @@ a:hover{
   color: var(--text-light);
 }
 
+.text-accent{
+  color: var(--accent);
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -96,4 +99,12 @@ a:hover{
   color: var(--accent);
   font-weight: 900; 
   font-style: italic;
+}
+
+.icon-custom-color {
+  color: var(--accent);
+}
+
+input, select, textarea{
+  background-color: var(--background);
 }

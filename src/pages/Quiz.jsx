@@ -35,7 +35,7 @@ export default function Quiz() {
 
   if (finalResult) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-zinc-900 text-white p-4">
+      <div className="min-h-screen flex items-center justify-center text-white p-4">
         <div className="max-w-md text-center border border-orange-500/30 p-8 rounded-2xl bg-zinc-800">
           <h1 className="text-4xl font-bold text-orange-500 mb-4">{finalResult.title}</h1>
           <p className="text-lg text-zinc-300 mb-6">{finalResult.desc}</p>
@@ -61,7 +61,7 @@ export default function Quiz() {
   const q = quizData.questions[step];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-900 text-white">
+    <div className="min-h-screen flex flex-col items-center justify-center text-white">
       <div className="w-full max-w-lg p-6 border border-white/10 rounded-xl">
         <span className="text-orange-500 font-mono">Step {step + 1} of {quizData.questions.length}</span>
 

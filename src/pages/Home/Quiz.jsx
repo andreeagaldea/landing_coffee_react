@@ -13,7 +13,7 @@ export default function Quiz() {
   };
 
   return (
-    <section className="py-20 bg-zinc-900 text-white">
+    <section className="py-20 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-8">Find Your Perfect Blend</h2>
         <div className="max-w-2xl mx-auto bg-zinc-800 p-8 rounded-3xl border border-white/10 shadow-xl">
