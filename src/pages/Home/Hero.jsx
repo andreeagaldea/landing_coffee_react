@@ -68,7 +68,7 @@ function Hero() {
   }, []);
 
   return (
-    <div id="hero" ref={sceneRef} 
+    <section id="hero" ref={sceneRef} 
                 className="background background-filter bg-cover bg-center flex items-center justify-center 
                 min-h-[calc(100vh-var(--nav-height,0px))] overflow-hidden">
       <div className="content flex flex-col lg:flex-row w-full items-center justify-center max-w-7xl">
@@ -103,7 +103,7 @@ function Hero() {
         </div>
 
       </div>
-    </div>
+    </section>
 
   );
 }
