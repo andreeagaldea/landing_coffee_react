@@ -17,7 +17,11 @@ const Navbar = () => {
     <nav ref={navRef} className='bg-dark-brown border-b border-[#12100E] px-8 py-4'>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         
-        <div className="font-bold text-2xl text-white">Logo</div>
+        <div className="font-bold text-2xl text-white">
+            <Link to="/">
+            <img src="../../src/assets/logo.png" alt="Logo" className='max-h-10 max-w-10'/>
+            </Link>
+        </div>
 
         <button id="burger-icon" className="text-white md:hidden focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

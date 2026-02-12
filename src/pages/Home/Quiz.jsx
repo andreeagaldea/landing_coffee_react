@@ -16,7 +16,7 @@ export default function Quiz() {
     <section className="py-20 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-8">Find Your Perfect Blend</h2>
-        <div className="max-w-2xl mx-auto bg-zinc-800 p-8 rounded-3xl border border-white/10 shadow-xl">
+        <div className="max-w-2xl mx-auto  p-8 rounded-3xl border border-white/10 shadow-xl">
           <p className="text-orange-500 font-mono mb-2">Start the Quiz</p>
           <h3 className="text-2xl mb-8">{firstQuestion.text}</h3>
           
