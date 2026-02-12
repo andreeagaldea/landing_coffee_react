@@ -24,3 +24,24 @@
   position: relative;
   z-index: 1;
 }
+
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-slide .card-inner {
+  transform: scale(0.85);
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+
+.swiper-slide-active .card-inner {
+  transform: scale(1.1) !important; 
+  opacity: 1 !important;
+}
+
+.swiper-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
