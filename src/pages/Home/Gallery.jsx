@@ -8,7 +8,7 @@ import { coffeeBeansData } from '../../data/coffeeBeansData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-function CoffeeGallery() {
+function Gallery() {
   const [selectedBean, setSelectedBean] = useState(null);
 
   const openModal = (bean) => {
@@ -170,4 +170,4 @@ function CoffeeGallery() {
   );
 }
 
-export default CoffeeGallery;
+export default Gallery;

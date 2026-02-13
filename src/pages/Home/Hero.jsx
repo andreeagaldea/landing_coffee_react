@@ -9,6 +9,7 @@ function Hero() {
 
   const titleRef = useRef(null);
   const paragraphRef = useRef(null);
+  const tagRef = useRef(null);
 
 
   useEffect(() => {
@@ -47,12 +48,20 @@ function Hero() {
     }
 
     if (paragraphRef.current) {
-      
         animate('#hero p', {
           opacity: [0, 1],
           duration: 500,
           easing: 'outQuad',
           delay: 2000,
+        });
+    }
+
+    if (tagRef.current) {
+        animate('#hero .tag', {
+          opacity: [0, 1],
+          duration: 300,
+          easing: 'outQuad',
+          delay: 1500,
         });
     }
 
@@ -74,6 +83,12 @@ function Hero() {
       <div className="content flex flex-col lg:flex-row w-full items-center justify-center max-w-7xl">
 
         <div className='w-full lg:w-1/2 p-5 flex flex-col justify-center'>
+        <div>
+          <span ref={tagRef} style={{opacity:0}}
+          className='tag px-4 py-1 text-accent text-[12px] font-bold uppercase rounded-full border border-orange-400/20 bg-orange-100/10'>
+          Ethically sourced
+          </span>
+        </div>
           <h1 ref={titleRef} className="text-white text-7xl md:text-8xl font-bold pt-5 pb-5 text-center lg:text-left">
             Pure <span className='special-text'>Artistry</span> In Every Bean.</h1>
           <p ref={paragraphRef} className='text-light opacity-75 text-center lg:text-left' style={{opacity:0}}>
