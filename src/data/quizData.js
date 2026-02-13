@@ -1,38 +1,114 @@
+import { FaBolt, FaLeaf, FaCloud, FaMugHot, FaWineGlassAlt, FaFillDrip, FaCoffee, FaGem } from 'react-icons/fa';
+import { GiCoffeePot, GiCoffeeBeans } from 'react-icons/gi';
+
 export const quizData = {
   questions: [
     {
       id: 1,
       text: "How do you usually start your morning?",
       options: [
-        { text: "With a strong energy boost", type: "A" },
-        { text: "Savoring complex flavors", type: "B" },
-        { text: "Something smooth & creamy", type: "C" }
+        { 
+          text: "With a strong energy boost", 
+          subtext: "Intense, quick, and powerful",
+          type: "A",
+          icon: FaBolt 
+        },
+        { 
+          text: "Savoring complex flavors", 
+          subtext: "Balanced, refined, and steady",
+          type: "B" ,
+          icon: FaGem
+        },
+        { 
+          text: "Something smooth & creamy", 
+          subtext: "Relaxed, comforting, and light",
+          type: "C",
+          icon: FaCloud 
+        }
       ]
     },
     {
       id: 2,
       text: "What flavor profile do you prefer?",
       options: [
-        { text: "Dark, chocolatey & bold", type: "A" },
-        { text: "Fruit-forward & floral", type: "B" },
-        { text: "Nutty & caramel sweetness", type: "C" }
+        { 
+          text: "Dark, chocolatey & bold", 
+          subtext: "Earthy notes with cocoa finish",
+          type: "A",
+          icon: GiCoffeeBeans 
+        },
+        { 
+          text: "Fruit-forward & floral", 
+          subtext: "Delicate with citrus brightness",
+          type: "B",
+          icon: FaWineGlassAlt
+         },
+        { 
+          text: "Nutty & caramel sweetness", 
+          subtext: "Natural sweetness and low acidity",
+          type: "C" ,
+          icon: FaLeaf
+        }
       ]
     },
     {
       id: 3,
       text: "How do you brew your coffee?",
       options: [
-        { text: "Espresso or Moka Pot", type: "A" },
-        { text: "Pour-over or Chemex", type: "B" },
-        { text: "Drip or French Press", type: "C" }
+        { 
+          text: "Espresso or Moka Pot", 
+          subtext: "High pressure and rich texture",
+          type: "A" ,
+          icon: FaMugHot
+        },
+        { 
+          text: "Pour-over or Chemex", 
+          subtext: "Clean, filtered, and aromatic",
+          type: "B",
+          icon: FaFillDrip
+        },
+        { 
+          text: "Drip or French Press", 
+          subtext: "Traditional, full-bodied, and simple",
+          type: "C",
+          icon: GiCoffeePot
+       }
       ]
     }
   ],
   results: {
-    A: { title: "The Bold Adventurer", desc: "You need our Dark Sumatra Roast." },
-    B: { title: "The Connoisseur", desc: "Try our Ethiopian Yirgacheffe." },
-    C: { title: "The Classic Soul", desc: "Our Colombian Medium Roast is yours." },
-    MIX: { title: "The Explorer", desc: "Our Signature House Blend fits you best." }
+    A: { 
+      title: "Intense & Powerful", 
+      tags: ["PROFIL A", "DARK ROAST"],
+      notes: ["Woody Notes", "Spices"],
+      image: "../../src/assets/results/dark-roast.webp",
+      desc: "Based on your choices, you are looking for a deep sensory experience. Your preferred profiles lean towards intense roasting, where the sugar in the coffee bean has completely caramelized.",
+      why: "You preferred brewing methods like Espresso or Moka Pot and seek a full body with low acidity."
+    },
+    B: { 
+      title: "Complex & Elegant", 
+      tags: ["PROFIL B", "LIGHT ROAST"],
+      notes: ["Floral", "Citrus"],
+      image: "../../src/assets/results/light-roast.webp",
+      desc: "You appreciate the subtle nuances of coffee. You enjoy high acidity and tea-like clarity in your cup.",
+      why: "Your preference for pour-over methods suggests a palate that enjoys discovering hidden floral notes."
+    },
+    C: { 
+      title: "Smooth & Balanced", 
+      tags: ["PROFIL C", "MEDIUM ROAST"],
+      notes: ["Caramel", "Roasted Nuts"],
+      image: "../../src/assets/results/medium-roast.webp",
+      desc: "You look for comfort in your coffee. A perfectly balanced cup with natural sweetness and a smooth finish.",
+      why: "You enjoy traditional brewing and a versatile profile that works perfectly every single morning."
+    },
+    MIX: { 
+      title: "The Explorer Blend", 
+      tags: ["SPECIAL", "HOUSE BLEND"],
+      notes: ["Chocolate", "Red Fruits"],
+      image: "../../src/assets/results/house-blend.webp",
+      desc: "You don't like to be boxed in! You enjoy a bit of everything: the body of a dark roast with the fruitiness of a light one.",
+      why: "Your varied answers suggest a curiosity for complex blends that change character as they cool down."
+    }
   }
 };
 
