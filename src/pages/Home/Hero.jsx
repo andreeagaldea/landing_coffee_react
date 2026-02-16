@@ -3,7 +3,7 @@ import Parallax from 'parallax-js';
 import { animate, createScope, stagger, splitText} from 'animejs';
 import './Home.css'
 
-function Hero() {
+export default function Hero() {
   const sceneRef = useRef(null);
   const scope = useRef(null);
 
@@ -122,5 +122,3 @@ function Hero() {
 
   );
 }
-
-export default Hero

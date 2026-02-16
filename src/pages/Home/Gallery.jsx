@@ -8,7 +8,7 @@ import { coffeeBeansData } from '../../data/coffeeBeansData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-function Gallery() {
+export default function Gallery() {
   const [selectedBean, setSelectedBean] = useState(null);
 
   const openModal = (bean) => {
@@ -71,7 +71,6 @@ function Gallery() {
           <SwiperSlide key={`${bean.id}-${index}`} className="h-full">
             <div className="card-inner group bg-[#12100E] border border-white/5 rounded-[2.5rem] p-6 h-full flex flex-col transition-all duration-500 hover:border-orange-300/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
               
-              {/* Imagine Card */}
               <div className="relative aspect-[4/5] rounded-[1.8rem] overflow-hidden mb-8">
                 <img 
                   src={bean.image} 
@@ -106,7 +105,7 @@ function Gallery() {
 
       {selectedBean && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6">
-          <div 
+          <div  data-testid="modal-backdrop"
             className="absolute inset-0 bg-black/95 backdrop-blur-md transition-opacity duration-300"
             onClick={closeModal}
           ></div>
@@ -114,7 +113,7 @@ function Gallery() {
           <div className="relative bg-[#12100E] w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[3rem] shadow-2xl flex flex-col md:flex-row border border-white/10 animate-in fade-in zoom-in duration-300">
             
             <button 
-              onClick={closeModal}
+              onClick={closeModal} aria-label="Close modal"
               className="cursor-pointer absolute top-8 right-8 z-20 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white transition-all border border-white/10"
             >
               <FaTimes size={18} />
@@ -169,5 +168,3 @@ function Gallery() {
     </section>
   );
 }
-
-export default Gallery;

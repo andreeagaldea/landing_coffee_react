@@ -93,3 +93,44 @@ The quiz uses a weighted system to determine the user's profile based on three k
 
 ---
 
+## Testing Suite
+
+To ensure a seamless coffee-discovery experience and robust performance, the project includes a comprehensive suite of tests using **Vitest** and **React Testing Library**.
+
+### 1. Logic & Routing Tests (Unit)
+* **Coffee Algorithm (`src/data/quizData.test.js`)**: Validates the recommendation engine, ensuring user answers correctly map to the Bold, Connoisseur, Classic, or Explorer profiles.
+* **App Navigation (`src/router/index.test.jsx`)**: Confirms that all URL paths (`/`, `/contact`, `/quiz`) are correctly mapped to their respective page components.
+
+### 2. Page & Component Tests (Integration)
+* **Hero Section (`Hero.test.jsx`)**: Verifies the initialization of Parallax effects and Anime.js kinetics, ensuring proper memory cleanup on unmount.
+* **Interactive Gallery (`Gallery.test.jsx`)**: Tests the modal system, including data injection for specific coffee beans and "click-to-close" backdrop functionality using `data-testid`.
+* **Navbar & Navigation (`Navbar.test.jsx`)**: Ensures the mobile burger menu toggles correctly and that navigation links properly reset the UI state.
+* **Contact Experience (`Contact.test.jsx`)**: Validates form validation logic, error states, and successful submission through mocked API services.
+* **Footer (`Footer.test.jsx`)**: Confirms consistent branding and presence of legal/copyright information.
+* **Home Page Composition (`Home/index.test.jsx`)**: Ensures all high-level sections (Hero, Gallery, Values, Quiz) are correctly integrated and rendered.
+
+### 3. Quiz Experience (UX Flow)
+* **Homepage Quick Start (`Quiz.test.jsx`)**: Verifies `sessionStorage` persistence and seamless redirection to the main quiz flow.
+* **Full Quiz Journey (`pages/Quiz.test.jsx`)**:
+    * **State Persistence**: Checks if the quiz correctly resumes from previous sessions.
+    * **Interactive Flow**: Ensures progress bars and steps update dynamically.
+    * **Results & Reset**: Validates the rendering of the result screen and "Retake Quiz" logic.
+
+### Coverage & UI
+
+The project maintains high-quality standards with **100% Statement Coverage** on all major UI components.
+
+```bash
+# Run all tests in the terminal
+npm test
+
+# Open the interactive Vitest UI (Visual Mode)
+npm run test:ui
+
+# Generate a detailed HTML coverage report
+npm run test:coverage
+
+```
+
+---
+
