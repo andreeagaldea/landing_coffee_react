@@ -46,7 +46,7 @@ src/
 
 ---
 
-## 🎨 Design System
+## Design System
 
 The project follows a **High-Contrast Dark Aesthetic** to evoke the feeling of a specialty coffee shop:
 
@@ -65,7 +65,7 @@ The project follows a **High-Contrast Dark Aesthetic** to evoke the feeling of a
 
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/andreeagaldea/landing_coffee_react.git](https://github.com/andreeagaldea/landing_coffee_react.git)
+    git clone https://github.com/andreeagaldea/landing_coffee_react.git
     ```
 
 2.  **Install dependencies**:
