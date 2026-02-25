@@ -2,6 +2,9 @@
 
 A premium, interactive web experience designed for coffee enthusiasts. This project features a sophisticated **Coffee Quiz** that matches users with their ideal roast profile based on their morning rituals and flavor preferences, all wrapped in a high-end "Artisan" aesthetic.
 
+
+[![Live Demo](https://img.shields.io/badge/demo-online-orange.svg?style=for-the-badge&logo=google-chrome&logoColor=white)](https://andreeagaldea.github.io/landing_coffee_react/)
+
 ---
 
 ## Features

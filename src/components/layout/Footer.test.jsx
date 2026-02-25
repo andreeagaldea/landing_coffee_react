@@ -3,11 +3,14 @@ import { describe, it, expect } from 'vitest';
 import Footer from './Footer';
 
 describe('Footer Component', () => {
-  it('should render the copyright text', () => {
+  it('should render the creator name and copyright', () => {
     render(<Footer />);
     
-    const copyrightText = screen.getByText(/© footer/i);
-    expect(copyrightText).toBeTruthy();
+    const creatorText = screen.getByText(/Andreea Aldea/i);
+    expect(creatorText).toBeTruthy();
+    
+    const copyrightSymbol = screen.getByText(/©/i);
+    expect(copyrightSymbol).toBeTruthy();
   });
 
   it('should display the design credit', () => {
@@ -18,10 +21,19 @@ describe('Footer Component', () => {
     expect(creditText.tagName).toBe('SMALL');
   });
 
+  it('should have a functional link to the GitHub repository', () => {
+    render(<Footer />);
+    
+    const githubLink = screen.getByRole('link', { name: /Andreea Aldea/i });
+    expect(githubLink).toBeTruthy();
+    expect(githubLink.getAttribute('href')).toBe('https://github.com/andreeagaldea/landing_coffee_react');
+    expect(githubLink.getAttribute('target')).toBe('_blank');
+  });
+
   it('should have the correct background class', () => {
     const { container } = render(<Footer />);
     const footerElement = container.querySelector('footer');
     
-    expect(footerElement.classList.contains('bg-dark-brown')).toBe(true);
+    expect(footerElement?.classList.contains('bg-dark-brown')).toBe(true);
   });
 });
