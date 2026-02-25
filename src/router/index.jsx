@@ -23,4 +23,7 @@ export const router = createBrowserRouter([
         },
     ],
   },
-]);
+], 
+{
+  basename: "/landing_coffee_react"
+});
