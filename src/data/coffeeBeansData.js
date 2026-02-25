@@ -4,7 +4,7 @@ export const coffeeBeansData = [
     region: "The Highlands",
     name: "Ethiopian Yirgacheffe",
     description: "A legacy of floral notes and citrus brilliance.",
-    image: "../../src/assets/location/ethiopia.webp",
+    image: "assets/location/ethiopia.webp",
     details: {
       origin: "Ethiopia, Yirgacheffe",
       altitude: "1,900 - 2,200m",
@@ -19,7 +19,7 @@ export const coffeeBeansData = [
     region: "The Forest",
     name: "Sumatra Mandheling",
     description: "The deep, earthy soul of the Indonesian soil.",
-    image: "../../src/assets/location/sumatra.webp",
+    image: "assets/location/sumatra.webp",
     details: {
       origin: "Sumatra, Indonesia",
       altitude: "1,100 - 1,500m",
@@ -34,7 +34,7 @@ export const coffeeBeansData = [
     region: "The Peaks",
     name: "Colombian Supremo",
     description: "A balanced journey of caramel and red apple.",
-    image: "../../src/assets/location/colombia.webp",
+    image: "assets/location/colombia.webp",
     details: {
       origin: "Huila, Colombia",
       altitude: "1,500 - 1,800m",
@@ -49,7 +49,7 @@ export const coffeeBeansData = [
     region: "The Plateaus",
     name: "Brazil Santos",
     description: "Nutty harmony with a smooth, velvety finish.",
-    image: "../../src/assets/location/brazil.webp",
+    image: "assets/location/brazil.webp",
     details: {
       origin: "São Paulo, Brazil",
       altitude: "900 - 1,200m",
@@ -64,7 +64,7 @@ export const coffeeBeansData = [
     region: "The Volcanoes",
     name: "Guatemala Antigua",
     description: "A bold dance of spice and smokey cocoa.",
-    image: "../../src/assets/location/guatemala.webp",
+    image: "assets/location/guatemala.webp",
     details: {
       origin: "Antigua Valley, Guatemala",
       altitude: "1,500 - 1,700m",
@@ -79,7 +79,7 @@ export const coffeeBeansData = [
     region: "The Slopes",
     name: "Kenya AA",
     description: "Bright acidity with a wine-like, berry complexity.",
-    image: "../../src/assets/location/kenya.webp",
+    image: "assets/location/kenya.webp",
     details: {
       origin: "Mount Kenya Region",
       altitude: "1,700 - 2,100m",

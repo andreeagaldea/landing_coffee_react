@@ -19,9 +19,9 @@ const Navbar = () => {
         
         <div className="font-bold text-2xl text-white">
             <Link to="/">
-            <img src="../../src/assets/logo.png" alt="Logo" className='max-h-10 max-w-10'/>
+            <img src="assets/logo.png" alt="Logo" className='max-h-10 max-w-10'/>
             </Link>
-        </div>
+        </div> 
 
         <button id="burger-icon" className="text-white md:hidden focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -81,7 +81,7 @@ export const quizData = {
       title: "Intense & Powerful", 
       tags: ["PROFIL A", "DARK ROAST"],
       notes: ["Woody Notes", "Spices"],
-      image: "../../src/assets/results/dark-roast.webp",
+      image: "assets/results/dark-roast.webp",
       desc: "Based on your choices, you are looking for a deep sensory experience. Your preferred profiles lean towards intense roasting, where the sugar in the coffee bean has completely caramelized.",
       why: "You preferred brewing methods like Espresso or Moka Pot and seek a full body with low acidity."
     },
@@ -89,7 +89,7 @@ export const quizData = {
       title: "Complex & Elegant", 
       tags: ["PROFIL B", "LIGHT ROAST"],
       notes: ["Floral", "Citrus"],
-      image: "../../src/assets/results/light-roast.webp",
+      image: "assets/results/light-roast.webp",
       desc: "You appreciate the subtle nuances of coffee. You enjoy high acidity and tea-like clarity in your cup.",
       why: "Your preference for pour-over methods suggests a palate that enjoys discovering hidden floral notes."
     },
@@ -97,7 +97,7 @@ export const quizData = {
       title: "Smooth & Balanced", 
       tags: ["PROFIL C", "MEDIUM ROAST"],
       notes: ["Caramel", "Roasted Nuts"],
-      image: "../../src/assets/results/medium-roast.webp",
+      image: "assets/results/medium-roast.webp",
       desc: "You look for comfort in your coffee. A perfectly balanced cup with natural sweetness and a smooth finish.",
       why: "You enjoy traditional brewing and a versatile profile that works perfectly every single morning."
     },
@@ -105,7 +105,7 @@ export const quizData = {
       title: "The Explorer Blend", 
       tags: ["SPECIAL", "HOUSE BLEND"],
       notes: ["Chocolate", "Red Fruits"],
-      image: "../../src/assets/results/house-blend.webp",
+      image: "assets/results/house-blend.webp",
       desc: "You don't like to be boxed in! You enjoy a bit of everything: the body of a dark roast with the fruitiness of a light one.",
       why: "Your varied answers suggest a curiosity for complex blends that change character as they cool down."
     }
